@@ -12,6 +12,10 @@ class Moss < Formula
     ENV["CONFIGURATION"] = "release"
     ENV["SIGN_IDENTITY"] = "-"
 
+    inreplace "BuildSupport/build-app.zsh",
+      'swift build -c "$CONFIGURATION"',
+      'swift build -c "$CONFIGURATION" --disable-sandbox'
+
     system "./BuildSupport/build-app.zsh"
 
     prefix.install ".build/app/MessagesCodexBridge.app"
