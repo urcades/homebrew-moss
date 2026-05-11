@@ -1,8 +1,8 @@
 class Moss < Formula
   desc "Native macOS Apple Messages bridge for prompting Codex from trusted senders"
   homepage "https://github.com/urcades/moss"
-  url "https://github.com/urcades/moss/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "d7083254f4538718278d351acb9feec7a73bc0dfcf1ab8613f232552ac546c01"
+  url "https://github.com/urcades/moss/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "ebdf84ece03d503f528f8c319da6119f8d907566392ca4a5c80df7de85fa2f7f"
   license "MIT"
   head "https://github.com/urcades/moss.git", branch: "main"
 
@@ -44,8 +44,8 @@ class Moss < Formula
         moss-open
         mossctl doctor
 
-      Use MOSS_CODEX_CWD=/path/to/workspace moss-open if you want fresh runtime
-      config to default Codex sessions to a specific working directory.
+      Use MOSS_CODEX_CWD=/path/to/workspace moss-open if runtime config does not
+      exist yet and you want Codex sessions to default to a specific working directory.
     EOS
   end
 
