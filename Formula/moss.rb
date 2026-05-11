@@ -8,6 +8,10 @@ class Moss < Formula
 
   depends_on macos: :sequoia
 
+  on_linux do
+    disable! date: "2026-05-11", because: "requires macOS AppKit and Messages"
+  end
+
   def install
     ENV["CONFIGURATION"] = "release"
     ENV["SIGN_IDENTITY"] = "-"
