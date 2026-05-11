@@ -1,8 +1,8 @@
 class Moss < Formula
   desc "Native macOS Apple Messages bridge for prompting Codex from trusted senders"
   homepage "https://github.com/urcades/moss"
-  url "https://github.com/urcades/moss/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "ebdf84ece03d503f528f8c319da6119f8d907566392ca4a5c80df7de85fa2f7f"
+  url "https://github.com/urcades/moss/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "b25cd8f74f002e05eee55fd854c9ee66f01631ac516108e0def38352c0199abd"
   license "MIT"
   head "https://github.com/urcades/moss.git", branch: "main"
 
