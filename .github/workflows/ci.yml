@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  formula:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit formula
+        run: brew audit --strict --online Formula/moss.rb
+      - name: Install formula
+        run: brew install --build-from-source Formula/moss.rb
+      - name: Test formula
+        run: brew test moss
